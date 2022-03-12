@@ -93,8 +93,10 @@
                   //Nah basicamente Debe estar en un arreglo nuevo en el indice 0, por ser un tensor4d en forma 1, 28, 28, 1
                   var tensor4 = tf.tensor4d(arr);
                   var resultados = modelo.predict(tensor4).dataSync();
-                  var mayorIndice = resultados.indexOf(Math.max.apply(null, resultados));
+                  var puntuacionPrediccion = Math.max.apply(null, resultados);
+                  var mayorIndice = resultados.indexOf(puntuacionPrediccion);
                   
+                  console.log("Puntuacion: " + puntuacionPrediccion);
                   console.log("Prediccion", mayorIndice);
                   document.getElementById("resultado").innerHTML = mayorIndice;
               }
