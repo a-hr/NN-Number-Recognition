@@ -22,4 +22,3 @@ on a web page through JavaScript to run the model, as seen on the toy web page.
 
 ## Dependencies
 * tensorflow
-* numpy
